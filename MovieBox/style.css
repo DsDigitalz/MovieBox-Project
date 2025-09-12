@@ -66,6 +66,6 @@ input::placeholder {
 
   /* Center the search bar on mobile within the collapsed menu */
   .navbar-collapse .d-flex {
-    justify-content: center !important;
+    /* justify-content: center !important; */
   }
 }
