@@ -14,6 +14,10 @@ input::placeholder {
   height: 100vh
 }
 
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
 .c-img {
   height: 100%;
   object-fit: cover;
@@ -68,5 +72,32 @@ input::placeholder {
   /* Center the search bar on mobile within the collapsed menu */
   .navbar-collapse .d-flex {
     /* justify-content: center !important; */
+  }
+}
+
+@media (max-width: 991.98px) {
+  /* Custom styles for the mobile and tablet dropdown menu */
+  .navbar-collapse {
+    background-color: #ffffff; /* White background */
+    color: #000000; /* Black text */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Style the text inputs and icons within the dropdown */
+  .navbar-collapse .input-group-text,
+  .navbar-collapse .form-control {
+    background-color: transparent !important;
+    color: #000000 !important;
+    border-color: #000000 !important;
+  }
+
+  /* Ensure the nav links are black */
+  .navbar-collapse .nav-link {
+    color: #000000 !important;
   }
 }
