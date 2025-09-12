@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: DM Sans;
+}
+
+input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+
+.c-item {
+  height: 100vh;
+}
+
+.c-img {
+  height: 100%;
+  object-fit: cove;
+}
+
+.hero-info {
+  margin-left: 1rem;
+}
+
+@media (max-width: 991px) {
+  .mobile-collapse-menu {
+    position: absolute;
+    top: 100%; /* Positions the div directly below the navbar */
+    right: 0; /* Aligns the div to the right edge of the navbar */
+    background-color: rgba(
+      0,
+      0,
+      0,
+      0.8
+    ); /* Adds a semi-transparent black background */
+    width: 250px; /* Adjust width as needed */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.search-bar {
+  max-width: 500px;
+}
+
+.search-bar .form-control {
+  border-right: none;
+  border-color: #fff;
+  border-radius: 6px 0 0 6px;
+}
+
+.search-bar .input-group-text {
+  border-left: none;
+  border-color: #fff;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 991.98px) {
+  .search-bar {
+    width: 100% !important;
+    max-width: 100%;
+  }
+
+  /* Center the search bar on mobile within the collapsed menu */
+  .navbar-collapse .d-flex {
+    justify-content: center !important;
+  }
+}
