@@ -11,7 +11,7 @@ input::placeholder {
 }
 
 .c-item {
-  height: 100vh
+  height: 100vh;
 }
 
 .navbar-toggler:focus {
@@ -51,9 +51,15 @@ input::placeholder {
 }
 
 .search-bar .form-control {
-  border-right: none;
+  /* border-right: none; */
   border-color: #fff;
   border-radius: 6px 0 0 6px;
+}
+
+.search-bar .form-control:focus {
+  /* box-shadow: none; */
+  border-color: #d10000;
+  /* outline:#d20000   */
 }
 
 .search-bar .input-group-text {
@@ -100,4 +106,24 @@ input::placeholder {
   .navbar-collapse .nav-link {
     color: #000000 !important;
   }
+}
+
+.red {
+  color: #8b0000; /* Dark red text color */
+  border-color: #8b0000; /* Dark red border color */
+}
+
+.btn-outline-dark-red:hover {
+  background-color: #8b0000; /* Dark red background on hover */
+  color: #ffffff; /* White text on hover */
+}
+
+.color:hover {
+  color: #fff; /* Changes the text color to white on hover */
+  background-color: #a58990; /* Changes the background to a darker red */
+  border-color: #be123c; /* Changes the border to match the new background */
+}
+
+.form-control::placeholder {
+  font-size: 0.8rem; /* Adjust the size as needed */
 }
