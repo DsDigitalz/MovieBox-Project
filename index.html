@@ -25,7 +25,7 @@
   </head>
   <body>
     <nav
-      class="navbar navbar-expand-lg bg-transparent position-absolute w-100 top-0 py-3 px-lg-4 px-md-3 z-1"
+      class="navbar navbar-expand-lg bg-transparent position-absolute w-100 top-0 py-3 px-lg-4 px-md-3 z-1 animate-on-load"
     >
       <div class="container-fluid">
         <div class="d-flex align-items-center gap-2">
@@ -98,7 +98,7 @@
       </div>
 
       <div
-        class="container hero-content text-white position-absolute top-50 start-0 translate-middle-y ps-md-5 ms-md-5 mt-5"
+        class="container hero-content text-white position-absolute top-50 start-0 translate-middle-y ps-md-5 ms-md-5 mt-5 animate-on-load"
       >
         <h1 class="fw-bold display-5">John Wick 3 : Parabellum</h1>
         <div class="d-flex align-items-center gap-4 my-3 hero-ratings">
@@ -138,7 +138,8 @@
       </div>
     </div>
 
-    <section class="container my-5">
+    <!-- Card section 1 -->
+    <section class="container my-5 fade-in-up">
       <div class="row">
         <div class="col-12 text-start">
           <h1 class="fw-bold fs-3">Featured Movie</h1>
@@ -278,7 +279,9 @@
         </div>
       </div>
     </section>
-    <section class="container my-5">
+
+    <!-- Card section 2 -->
+    <section class="container my-5 fade-in-up">
       <div class="row">
         <div class="col-12 text-start">
           <h1 class="fw-bold fs-3">New Arrival</h1>
@@ -419,8 +422,7 @@
       </div>
     </section>
 
-    <!-- Video section -->
-    <section class="container my-5">
+    <section class="container my-5 fade-in-up">
       <div class="row">
         <div class="col-12 text-start">
           <h1 class="fw-bold fs-3">Exclusive Videos</h1>
@@ -493,7 +495,7 @@
       </div>
     </section>
 
-    <section class="container my-5">
+    <section class="container my-5 fade-in-up">
       <div class="row">
         <div class="col-12 text-start">
           <h1 class="fw-bold fs-3">Featured Casts</h1>
@@ -557,7 +559,7 @@
       </div>
     </section>
 
-    <footer class="bg-light py-5">
+    <footer class="bg-light py-5 fade-in-up">
       <div class="container text-center">
         <div
           class="d-flex flex-wrap justify-content-center gap-5 mb-3 social-icons"
@@ -603,4 +605,24 @@
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"
   ></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll(".fade-in-up").forEach((element) => {
+        element.classList.add("hidden");
+        observer.observe(element);
+      });
+    });
+  </script>
 </html>
